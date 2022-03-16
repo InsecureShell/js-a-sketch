@@ -1,11 +1,13 @@
 function createCanvas() {
-    for (let i = 0; i < 257; i++) {
-        const block = document.createElement('div');
+    // loop to create 256 blocks and add them to the canvas
+    for(let i = 0; i < 257; i++) {
+        let block = document.createElement('div');
+        block.classList.add("block");
 
         document.getElementById("canvas").appendChild(block);
         
         console.log(`Created block #${i}`);
-    }
-}
+    };
+};
 
 createCanvas();

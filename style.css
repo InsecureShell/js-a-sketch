@@ -1,0 +1,8 @@
+#canvas {
+    display: flex-wrap;
+}
+
+.block {
+    padding: 1px;
+    background-color: black;
+}
