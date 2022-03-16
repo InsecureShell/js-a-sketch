@@ -1,5 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #333333;
+    color: #FFF;
+}
+
 #canvas {
     display: flex-wrap;
+    border: 6px solid #37BC97; 
 }
 
 .block {
