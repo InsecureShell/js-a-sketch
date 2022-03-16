@@ -10,11 +10,15 @@ body {
 }
 
 #canvas {
-    display: flex-wrap;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    width: 800px;
+    height: 800px;
     border: 6px solid #37BC97; 
 }
 
 .block {
-    padding: 1px;
+    border: solid 1px gray;
     background-color: black;
 }

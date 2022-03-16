@@ -1,6 +1,6 @@
 function createCanvas() {
     // loop to create 256 blocks and add them to the canvas
-    for(let i = 0; i < 257; i++) {
+    for(let i = 0; i < 256; i++) {
         let block = document.createElement('div');
         block.classList.add("block");
 
