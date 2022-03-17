@@ -15,8 +15,6 @@ function createCanvas() {
 
         // add the block to the canvas
         canvas.appendChild(block);
-        
-        console.log(`Created block #${i}`);
     };
 };
 
