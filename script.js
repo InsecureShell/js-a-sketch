@@ -1,6 +1,7 @@
 let canvas = document.getElementById("canvas");
+let clearButton = document.getElementById("clear");
 
-function createCanvas() {
+function createCanvas(){
     // loop to create 256 blocks and add them to the canvas
     for(let i = 0; i < 256; i++) {
         // create a div and give it the "block" class
@@ -18,4 +19,13 @@ function createCanvas() {
     };
 };
 
+function clearCanvas(){
+    // select all of the blocks and put them in an array
+    let canvasBlocks = document.querySelectorAll(".block");
+
+    // loop over the array and remove the block-hover class from each one
+    canvasBlocks.forEach(block => block.classList.remove("block-hover"));
+};
+
 createCanvas();
+clearButton.addEventListener("click", clearCanvas);
