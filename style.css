@@ -23,6 +23,7 @@ body {
     background-color: #ffffff;
 }
 
+/* used in order to color the blocks in the canvas */
 .block-hover {
     background-color: #000000;
 }
