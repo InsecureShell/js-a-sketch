@@ -9,6 +9,12 @@ body {
     color: #FFF;
 }
 
+header {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
 #canvas {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
