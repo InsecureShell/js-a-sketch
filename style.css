@@ -33,3 +33,15 @@ header {
 .block-hover {
     background-color: #000000;
 }
+
+button {
+    padding: 10px 20px 10px 20px;
+    background-color: #2484c4;
+    border: solid 1px #220080;
+    box-shadow: 4px 2px 24px 2px #0000003d;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 2px 1px 14px 1px #0000003d;
+}
