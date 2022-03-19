@@ -15,6 +15,9 @@ header {
     padding-bottom: 2em;
 }
 
+.container {
+}
+
 #canvas {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
