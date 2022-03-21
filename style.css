@@ -17,12 +17,15 @@ header {
 
 .slider-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
     padding: 1em;
 }
 
 .slider {
     height: 18px;
+    width: 200px;
+    margin: 0 auto;
     -webkit-appearance: none;
     appearance: none;
     outline: none;
