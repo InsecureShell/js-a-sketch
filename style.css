@@ -22,6 +22,26 @@ header {
 }
 
 .slider {
+    height: 18px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    background: #566d66;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #2484c4;
+}
+
+.slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #2484c4;
+    border: none;
 }
 
 /* container for the buttons and the canvas */
