@@ -15,6 +15,15 @@ header {
     padding-bottom: 2em;
 }
 
+.slider-container {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.slider {
+}
+
 /* container for the buttons and the canvas */
 .container {
     display: flex;
