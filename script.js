@@ -1,9 +1,23 @@
 let canvas = document.getElementById("canvas");
 let clearButton = document.getElementById("clear");
+let sliderRange = document.getElementById("blockSlider");
+
+// this will be used for the size of the blocks by determining the number of rows
+// and columns
+let blockSize = sliderRange.value;
+
+// the number of blocks will be the block size times itself
+// or, the number of columns times the number of rows
+// this keeps things in an even square and just changes the size of the blocks
+// using grid fractions
+let numBlocks = blockSize * blockSize;
 
 function createCanvas(){
-    // loop to create 256 blocks and add them to the canvas
-    for(let i = 0; i < 256; i++) {
+    canvas.style.gridTemplateColumns = `repeat(${blockSize}, 1fr)`;
+    canvas.style.gridTemplateRows = `repeat(${blockSize}, 1fr)`;
+
+    // loop to create the correct number of blocks
+    for(let i = 0; i < numBlocks; i++) {
         // create a div and give it the "block" class
         let block = document.createElement('div');
         block.classList.add("block");
