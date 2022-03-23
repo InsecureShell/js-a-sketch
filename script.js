@@ -65,19 +65,32 @@ function colorBlock() {
     }
 };
 
-function toggleButton() {
+function toggleButton(button) {
     // change the styling depending on if the button is activated or not
-    if (this.classList.contains("toggle")) {
-        this.classList.remove("toggle");
+    if (button.classList.contains("toggle")) {
+        button.classList.remove("toggle");
     }
     else {
-        this.classList.add("toggle");
+        button.classList.add("toggle");
+    };
+};
+
+function rgbToggle() {
+    // toggles the RGB mode on and off
+    if(rgbMode) {
+        rgbMode = false;
     }
-}
+    else {
+        rgbMode = true;
+    };
+
+    // updates the button styling
+    toggleButton(this);
+};
 
 createCanvas();
 clearButton.addEventListener("click", clearCanvas);
-rgbButton.addEventListener("click", toggleButton);
+rgbButton.addEventListener("click", rgbToggle);
 
 sliderRange.oninput = function() {
 
