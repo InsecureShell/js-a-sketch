@@ -15,6 +15,7 @@ let blockSize = sliderRange.value;
 let numBlocks = blockSize * blockSize;
 
 let rgbMode = false;
+let grid = false;
 
 function createCanvas(){
     canvas.style.gridTemplateColumns = `repeat(${blockSize}, 1fr)`;
@@ -25,6 +26,10 @@ function createCanvas(){
         // create a div and give it the "block" class
         let block = document.createElement('div');
         block.classList.add("block");
+
+        if(grid) {
+            block.classList.add("block-grid");
+        };
 
         // add mouseenter event listener to color the block 
         // when the mouse hovers over it
@@ -86,6 +91,13 @@ function gridToggle() {
     canvasBlocks.forEach(block => block.classList.toggle("block-grid"));
 
     this.classList.toggle("toggle");
+
+    if(grid) {
+        grid = false;
+    }
+    else {
+        grid = true;
+    }
 };
 
 function refreshCanvas() {
