@@ -66,16 +66,6 @@ function colorBlock() {
     }
 };
 
-function toggleButton(button) {
-    // change the styling depending on if the button is activated or not
-    if (button.classList.contains("toggle")) {
-        button.classList.remove("toggle");
-    }
-    else {
-        button.classList.add("toggle");
-    };
-};
-
 function rgbToggle() {
     // toggles the RGB mode on and off
     if(rgbMode) {
@@ -86,7 +76,7 @@ function rgbToggle() {
     };
 
     // updates the button styling
-    toggleButton(this);
+    this.classList.toggle("toggle");
 };
 
 function gridToggle() {
@@ -95,7 +85,7 @@ function gridToggle() {
 
     canvasBlocks.forEach(block => block.classList.toggle("block-grid"));
 
-    toggleButton(this);
+    this.classList.toggle("toggle");
 };
 
 function refreshCanvas() {
