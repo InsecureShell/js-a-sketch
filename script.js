@@ -88,18 +88,20 @@ function rgbToggle() {
     toggleButton(this);
 };
 
-createCanvas();
-clearButton.addEventListener("click", clearCanvas);
-rgbButton.addEventListener("click", rgbToggle);
-
-sliderRange.oninput = function() {
-
+function refreshCanvas() {
     // delete the canvas to create a new one with the right block size
     deleteCanvas();
 
     // update values for the size and number of blocks
-    blockSize = this.value;
+    blockSize = sliderRange.value;
     numBlocks = blockSize * blockSize;
-    
+
     createCanvas();
 };
+
+createCanvas();
+
+clearButton.addEventListener("click", clearCanvas);
+rgbButton.addEventListener("click", rgbToggle);
+
+sliderRange.oninput = refreshCanvas;
