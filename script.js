@@ -49,3 +49,15 @@ function deleteCanvas() {
 
 createCanvas();
 clearButton.addEventListener("click", clearCanvas);
+
+sliderRange.oninput = function() {
+
+    // delete the canvas to create a new one with the right block size
+    deleteCanvas();
+
+    // update values for the size and number of blocks
+    blockSize = this.value;
+    numBlocks = blockSize * blockSize;
+    
+    createCanvas();
+};
