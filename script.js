@@ -37,7 +37,7 @@ function clearCanvas(){
     // select all of the blocks and put them in an array
     let canvasBlocks = document.querySelectorAll(".block");
 
-    // loop over the array and remove the block-hover class from each one
+    // loop over the array and switch the color of each block to white
     canvasBlocks.forEach(block => block.style.backgroundColor = "white");
 };
 
