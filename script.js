@@ -41,5 +41,11 @@ function clearCanvas(){
     canvasBlocks.forEach(block => block.classList.remove("block-hover"));
 };
 
+function deleteCanvas() {
+    let blocks = document.querySelectorAll(".block");
+
+    blocks.forEach(block => block.remove());
+};
+
 createCanvas();
 clearButton.addEventListener("click", clearCanvas);
