@@ -64,8 +64,11 @@ header {
 }
 
 .block {
-    border: solid 1px gray;
     background-color: #ffffff;
+}
+
+.block-grid {
+    border: solid 1px gray;
 }
 
 .button-container {

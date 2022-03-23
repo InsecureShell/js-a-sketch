@@ -2,6 +2,7 @@ let canvas = document.getElementById("canvas");
 let clearButton = document.getElementById("clear");
 let sliderRange = document.getElementById("blockSlider");
 let rgbButton = document.getElementById("rgb");
+let gridButton = document.getElementById("grid");
 
 // this will be used for the size of the blocks by determining the number of rows
 // and columns
@@ -88,6 +89,15 @@ function rgbToggle() {
     toggleButton(this);
 };
 
+function gridToggle() {
+    // get all the blocks and then toggle their grid
+    let canvasBlocks = document.querySelectorAll(".block");
+
+    canvasBlocks.forEach(block => block.classList.toggle("block-grid"));
+
+    toggleButton(this);
+};
+
 function refreshCanvas() {
     // delete the canvas to create a new one with the right block size
     deleteCanvas();
@@ -103,5 +113,6 @@ createCanvas();
 
 clearButton.addEventListener("click", clearCanvas);
 rgbButton.addEventListener("click", rgbToggle);
+gridButton.addEventListener("click", gridToggle);
 
 sliderRange.oninput = refreshCanvas;
