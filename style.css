@@ -75,11 +75,11 @@ header {
 
 button {
     height: 45px;
-    margin-right: 10px;
+    margin-right: 20px;
     padding: 10px 20px 10px 20px;
     background-color: #2484c4;
     border: solid 1px #220080;
-    box-shadow: 4px 2px 24px 2px #0000003d;
+    box-shadow: 4px 2px 20px 2px #0000003d;
 }
 
 button:active {
