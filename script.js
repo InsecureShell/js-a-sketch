@@ -12,6 +12,8 @@ let blockSize = sliderRange.value;
 // using grid fractions
 let numBlocks = blockSize * blockSize;
 
+let rgbMode = false;
+
 function createCanvas(){
     canvas.style.gridTemplateColumns = `repeat(${blockSize}, 1fr)`;
     canvas.style.gridTemplateRows = `repeat(${blockSize}, 1fr)`;
@@ -24,9 +26,7 @@ function createCanvas(){
 
         // add mouseenter event listener to color the block 
         // when the mouse hovers over it
-        block.addEventListener("mouseenter", function() {
-            block.classList.add("block-hover");
-        });
+        block.addEventListener("mouseenter", colorBlock);
 
         // add the block to the canvas
         canvas.appendChild(block);
@@ -38,13 +38,30 @@ function clearCanvas(){
     let canvasBlocks = document.querySelectorAll(".block");
 
     // loop over the array and remove the block-hover class from each one
-    canvasBlocks.forEach(block => block.classList.remove("block-hover"));
+    canvasBlocks.forEach(block => block.style.backgroundColor = "white");
 };
 
 function deleteCanvas() {
     let blocks = document.querySelectorAll(".block");
 
     blocks.forEach(block => block.remove());
+};
+
+function colorBlock() {
+
+    // check if RGB mode is enabled
+    // if it is then color the block randomly, otherwise use black
+    if(rgbMode) {
+    // set each of the RGB values to a random number
+    let randR = Math.floor(Math.random() * 256);
+    let randG = Math.floor(Math.random() * 256);
+    let randB = Math.floor(Math.random() * 256);
+
+    this.style.backgroundColor = `rgb(${randR}, ${randG}, ${randB})`;
+    }
+    else {
+        this.style.backgroundColor = "black";
+    }
 };
 
 createCanvas();
