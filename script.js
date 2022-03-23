@@ -1,6 +1,7 @@
 let canvas = document.getElementById("canvas");
 let clearButton = document.getElementById("clear");
 let sliderRange = document.getElementById("blockSlider");
+let rgbButton = document.getElementById("rgb");
 
 // this will be used for the size of the blocks by determining the number of rows
 // and columns
@@ -64,8 +65,19 @@ function colorBlock() {
     }
 };
 
+function toggleButton() {
+    // change the styling depending on if the button is activated or not
+    if (this.classList.contains("toggle")) {
+        this.classList.remove("toggle");
+    }
+    else {
+        this.classList.add("toggle");
+    }
+}
+
 createCanvas();
 clearButton.addEventListener("click", clearCanvas);
+rgbButton.addEventListener("click", toggleButton);
 
 sliderRange.oninput = function() {
 
