@@ -15,6 +15,11 @@ header {
     padding-bottom: 2em;
 }
 
+header h1 {
+    margin-top: 10px;
+    color: #2484c4;
+}
+
 .slider-container {
     display: flex;
     flex-direction: column;
@@ -45,6 +50,11 @@ header {
     height: 24px;
     background: #2484c4;
     border: none;
+}
+
+.slider-text {
+    margin: 10px;
+    font-weight: bold;
 }
 
 /* container for the buttons and the canvas */
@@ -83,6 +93,7 @@ button {
     background-color: #2484c4;
     border: solid 2px #220080;
     box-shadow: 4px 2px 20px 2px #0000003d;
+    font-weight: bold;
 }
 
 button:active {
