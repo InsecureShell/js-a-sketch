@@ -17,7 +17,7 @@ let numBlocks = blockSize * blockSize;
 let rgbMode = false;
 let grid = false;
 
-function createCanvas(){
+function createCanvas() {
     canvas.style.gridTemplateColumns = `repeat(${blockSize}, 1fr)`;
     canvas.style.gridTemplateRows = `repeat(${blockSize}, 1fr)`;
 
@@ -40,7 +40,7 @@ function createCanvas(){
     };
 };
 
-function clearCanvas(){
+function clearCanvas() {
     // select all of the blocks and put them in an array
     let canvasBlocks = document.querySelectorAll(".block");
 
@@ -68,7 +68,7 @@ function colorBlock() {
     }
     else {
         this.style.backgroundColor = "black";
-    }
+    };
 };
 
 function rgbToggle() {
@@ -97,7 +97,7 @@ function gridToggle() {
     }
     else {
         grid = true;
-    }
+    };
 };
 
 function refreshCanvas() {
