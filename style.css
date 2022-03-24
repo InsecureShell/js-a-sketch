@@ -39,6 +39,7 @@ header h1 {
     appearance: none;
     outline: none;
     background: #566d66;
+    direction: rtl;
 }
 
 .slider::-webkit-slider-thumb {
