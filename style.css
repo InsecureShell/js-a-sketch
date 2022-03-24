@@ -72,7 +72,7 @@ header h1 {
     grid-template-rows: repeat(16, 1fr);
     width: 640px;
     height: 640px;
-    border: 4px solid #37BC97; 
+    border: 4px solid #c6878f; 
 }
 
 .block {
