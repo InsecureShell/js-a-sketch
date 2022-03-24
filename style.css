@@ -116,6 +116,19 @@ button:active {
 
 footer {
     background-color: #11151C;
-    height: 36px;
+    padding-top: 1em;
+    padding-bottom: 1em;
     margin-top: 10px;
+    text-align: center;
+}
+
+footer a {
+    color: #2484c4;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer a:hover {
+    color: #0a3e61;
 }
